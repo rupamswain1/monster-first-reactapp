@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import React, {Component} from 'react';
 import './App.css';
+import {CardList} from './components/card-list/card-list.component';
 
 class App extends Component{
   constructor(){
@@ -34,11 +35,7 @@ class App extends Component{
   render(){
     return (
       <div className="App">
-        <header className="App-header">
-          {
-            this.state.pocketMonsters.map(pocketMonsters=><h3 key={pocketMonsters.id}>{pocketMonsters.name}</h3>)
-          }
-        </header>
+        <CardList pocketMonsters={this.state.pocketMonsters}></CardList>      
       </div>
     );
   }
