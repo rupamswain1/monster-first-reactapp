@@ -7,24 +7,8 @@ class App extends Component{
   constructor(){
     super();
     this.state={
-      pocketMonsters: [
-        // {
-        //   name:"Pikachu",
-        //   id:1
-        // },
-        // {
-        //   name:"Bulbasaur",
-        //   id:2
-        // },
-        // {
-        //   name:"Charmander",
-        //   id:3
-        // },
-        // {
-        //   name:"Squirtel",
-        //   id:4
-        // },
-      ]
+      pocketMonsters: [],
+      searchMonster:[]
     };
   }
   componentDidMount(){
@@ -33,9 +17,12 @@ class App extends Component{
     then(users=>this.setState({pocketMonsters:users}));
   }
   render(){
+    const{pocketMonsters,searchMonster}=this.state;
+    const filteredMonster=pocketMonsters.filter(mon=>mon.name.toLowerCase().includes(searchMonster))
     return (
       <div className="App">
-        <CardList pocketMonsters={this.state.pocketMonsters}></CardList>      
+        <input type='search' className='searchBox' id='mosterIp' placeholder='Search Monster' onChange={e=>this.setState({searchMonster:e.target.value})}></input>
+        <CardList pocketMonsters={filteredMonster}></CardList>      
       </div>
     );
   }
