@@ -6,3 +6,45 @@
     grid-gap: 20px;
     align-content: center;
 }
+@media screen and (max-width:1452px){
+    .cardListMain{
+        width: 85vw;
+        margin:0 auto;
+        display: grid;
+        grid-template-columns:1fr 1fr 1fr;
+        grid-gap: 20px;
+        align-content: center;
+    }
+}
+@media screen and (max-width:1156px){
+    .cardListMain{
+        width: 85vw;
+        margin:0 auto;
+        display: grid;
+        grid-template-columns:1fr 1fr;
+        grid-gap: 20px;
+        align-content: center;
+    }
+}
+@media screen and (max-width:808px){
+    .cardListMain{
+        width: 85vw;
+        margin:0 auto;
+        display: grid;
+        grid-template-columns:1fr;
+        grid-gap: 20px;
+        align-content: center;
+    }
+}
+@media screen and (max-width:380px){
+    .cardListMain{
+        width: 92vw;
+        margin:0 auto;
+        display: grid;
+        grid-template-columns:1fr;
+        grid-gap: 0px;
+        align-content: center;
+        
+    }
+}
+

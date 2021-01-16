@@ -4,9 +4,9 @@ import {Card} from '../card/card.component';
 
 export const CardList=props=>{   
  return(
-    <div className='cardListMain'>{
+    <div className='cardListMain' key='cardList'>{
     props.pocketMonsters.map(pocketMonsters=>
-        <Card monster={pocketMonsters}/>
+        <Card key={pocketMonsters.id} monster={pocketMonsters}/>
         )}
     </div>);
 };

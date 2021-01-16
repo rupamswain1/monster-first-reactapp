@@ -18,3 +18,10 @@
 .card:hover{
     transform: scale(1.05);
 }
+@media screen and (max-width:380px){
+    .card{
+        padding: 0px;
+        margin-bottom:20px; 
+
+    };
+}
